@@ -251,32 +251,48 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
 .content p {
     font-size: 18px;
-    text-indent: 1cm;
     text-align: justify;
+    padding: 0 40px 0 40px;
+}
+
+.imgBox {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: .5s ease-in-out;
+}
+
+.imgBox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-30deg);
+    transition: .5s ease-in-out;
+}
+
+.imgBox:hover {
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.imgBox:hover:before {
+    left: 110%;
 }
 
 .content img {
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 20px;
-    -webkit-filter: sepia(100%);
-    filter: sepia(100%);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
     width: 100%;
-    min-width: 400px;
-    max-width: 600px;
     height: auto;
-}
-
-.content img:hover {
-    -webkit-filter: sepia(0);
-    filter: sepia(0);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -287,9 +303,6 @@ h2 {
     }
     .row2 .item2 {
         order: 2;
-    }
-    .content img {
-        min-width: 100px;
     }
 }
 
