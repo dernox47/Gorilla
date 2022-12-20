@@ -215,13 +215,13 @@ h1 {
     background-color: #2F3E46;
 }
 
-@media only screen and (max-width: 515px) {
+@media only screen and (max-width: 1100px) {
     .navBar ul a {
         display: none;
     }
 }
 
-@media only screen and (min-width: 515px) {
+@media only screen and (min-width: 1101px) {
     .smallNav,
     .navBar .nav__trigger {
         display: none;
@@ -239,6 +239,10 @@ h1 {
 h2 {
     text-align: center;
     margin: 40px;
+}
+
+h3 {
+    padding: 0 0 0 40px;
 }
 
 .content {
@@ -266,6 +270,7 @@ h2 {
     border-radius: 20px;
     width: 100%;
     height: auto;
+    min-width: 300px;
 }
 
 .imgBox {
