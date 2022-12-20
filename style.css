@@ -261,6 +261,13 @@ h2 {
     padding: 0 40px 0 40px;
 }
 
+.content img {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
 .imgBox {
     position: relative;
     overflow: hidden;
@@ -278,6 +285,7 @@ h2 {
     background: rgba(255, 255, 255, 0.3);
     transform: skewX(-30deg);
     transition: .5s ease-in-out;
+    z-index: 2000;
 }
 
 .imgBox:hover {
@@ -286,13 +294,6 @@ h2 {
 
 .imgBox:hover:before {
     left: 110%;
-}
-
-.content img {
-    border: 2px solid black;
-    border-radius: 20px;
-    width: 100%;
-    height: auto;
 }
 
 @media only screen and (max-width: 1200px) {
